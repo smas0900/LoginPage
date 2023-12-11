@@ -1,5 +1,7 @@
 import { Link, Route, Routes } from "react-router-dom";
 import { Homepage } from "./components/Homepage";
+import Login from "./components/Login";
+import SignUp from "./components/signup";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         </ul>
       </nav>
       <Routes>
+        <Route path="/Login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/" element={<Homepage />} />
       </Routes>
     </>

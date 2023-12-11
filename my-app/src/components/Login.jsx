@@ -29,6 +29,7 @@ const Login = () => {
 
     if (matchingUser) {
       console.log("Login Successful:", matchingUser);
+      alert("Login Successful");
     } else {
       alert("Invalid email or password");
     }

@@ -38,7 +38,7 @@ const SignUp = () => {
     // Save user details to local storage
     const updatedUsers = [...storedUsers, userDetails];
     localStorage.setItem("users", JSON.stringify(updatedUsers));
-
+    alert("Signup Sucessful");
     console.log("Signup Submitted:", userDetails);
   };
 
