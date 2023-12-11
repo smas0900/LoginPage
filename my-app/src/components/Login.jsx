@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [credentials, setCredentials] = useState({
     username: "",
     email: "",
@@ -29,7 +31,7 @@ const Login = () => {
 
     if (matchingUser) {
       console.log("Login Successful:", matchingUser);
-      alert("Login Successful");
+      navigate("/Mainpage");
     } else {
       alert("Invalid email or password");
     }
