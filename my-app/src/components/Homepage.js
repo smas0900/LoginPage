@@ -4,11 +4,6 @@ import Login from "./Login";
 import SignUp from "./signup";
 
 export function Homepage() {
-  // Redirect to login page if not authenticated
-  // if (!isAuthenticated) {
-  //   return <Redirect to="/Login" />;
-  // }
-
   return (
     <>
       <div>

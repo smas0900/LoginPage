@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+  const navigate = useNavigate();
   const [userDetails, setUserDetails] = useState({
     username: "",
     email: "",
@@ -38,7 +40,10 @@ const SignUp = () => {
     // Save user details to local storage
     const updatedUsers = [...storedUsers, userDetails];
     localStorage.setItem("users", JSON.stringify(updatedUsers));
-    alert("Signup Sucessful");
+    alert("Signup Successful");
+
+    navigate("/login");
+
     console.log("Signup Submitted:", userDetails);
   };
 
