@@ -31,7 +31,7 @@ const Login = () => {
 
     if (matchingUser) {
       console.log("Login Successful:", matchingUser);
-      navigate("/Mainpage");
+      navigate("/Posts");
     } else {
       alert("Invalid email or password");
     }

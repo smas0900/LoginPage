@@ -2,7 +2,9 @@ import { Link, Route, Routes } from "react-router-dom";
 import { Homepage } from "./components/Homepage";
 import Login from "./components/Login";
 import SignUp from "./components/signup";
-import Mainpage from "./components/Mainpage";
+import NewPostForm from "./components/NewPostForm";
+import Posts from "./components/Posts";
+import Comments from "./components/Comments";
 
 function App() {
   return (
@@ -18,7 +20,9 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/" element={<Homepage />} />
-        <Route path="/mainpage" element={<Mainpage />} />
+        <Route path="Posts" element={<Posts />} />
+        <Route path="/NewPostForm" element={<NewPostForm />} />
+        <Route path="/Comments" element={<Comments />} />
       </Routes>
     </>
   );
