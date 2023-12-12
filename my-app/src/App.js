@@ -4,7 +4,7 @@ import Login from "./components/Login";
 import SignUp from "./components/signup";
 import NewPostForm from "./components/NewPostForm";
 import Posts from "./components/Posts";
-import Comments from "./components/Comments";
+// import Comments from "./components/Comments";
 
 function App() {
   return (
@@ -16,13 +16,14 @@ function App() {
           </li>
         </ul>
       </nav>
+
       <Routes>
         <Route path="/Login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/" element={<Homepage />} />
-        <Route path="Posts" element={<Posts />} />
+        <Route path="/Posts" element={<Posts />} />
         <Route path="/NewPostForm" element={<NewPostForm />} />
-        <Route path="/Comments" element={<Comments />} />
+        {/* <Route path="/Comments" element={<Comments />} /> */}
       </Routes>
     </>
   );

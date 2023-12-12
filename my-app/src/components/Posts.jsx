@@ -7,7 +7,6 @@ const Posts = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    // Fetch posts from the API endpoint
     const fetchPosts = async () => {
       const response = await axios.get(
         "https://jsonplaceholder.typicode.com/posts"
@@ -23,7 +22,6 @@ const Posts = () => {
   };
 
   const handleDeletePost = async (postId) => {
-    // Implement logic to delete the post on the server
     await axios.delete(`https://jsonplaceholder.typicode.com/posts/${postId}`);
     setPosts((prevPosts) => prevPosts.filter((post) => post.id !== postId));
   };
@@ -38,7 +36,6 @@ const Posts = () => {
             <h3>{post.title}</h3>
             <p>{post.body}</p>
             <button onClick={() => handleDeletePost(post.id)}>Delete</button>
-            {/* Add an edit button and functionality as needed */}
             <Comments postId={post.id} />
           </li>
         ))}
