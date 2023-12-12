@@ -31,6 +31,7 @@ const Login = () => {
 
     if (matchingUser) {
       console.log("Login Successful:", matchingUser);
+      localStorage.setItem("loggedInUser", JSON.stringify(matchingUser));
       navigate("/Posts");
     } else {
       alert("Invalid email or password");
